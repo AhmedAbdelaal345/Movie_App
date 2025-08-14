@@ -56,18 +56,17 @@ class MovieModel {
     for (int i = 0; i < 100; i++) {
       final int titleIndex = i % bookTitles.length;
       final int descIndex = i % descriptions.length;
-      final int imageIndex = i % 14; // Alternate between the two images
+      final int imageIndex = i % 14; 
 
       final String title = "${bookTitles[titleIndex]} ${i + 1}";
       final String desc = descriptions[descIndex];
-      final double rating = 7.5 + (i % 25) / 10; // Ratings between 7.5-10.0
+      final double rating = 7.5 + (i % 25) / 10; 
 
-      // Create dates with consistent pattern (one month apart)
       final DateTime releaseDate = DateTime(2020, 1 + (i % 12), 1 + (i % 28));
 
       final String image = images[imageIndex];
       final bool isBookmarked = false;
-      final bool isFeatured = i % 7 == 0; // Every fifth book is featured
+      final bool isFeatured = i % 7 == 0; 
 
       movies.add(
           MovieModel(

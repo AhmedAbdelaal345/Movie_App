@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app/helper/themes/app_color.dart';
 import 'package:movie_app/models/movie_model.dart';
+import 'package:movie_app/view/pages/stitch_design.dart';
 import 'package:movie_app/view/widget/featured_item_widget.dart';
 import 'package:movie_app/view/widget/grid_movie_item.dart';
 
@@ -35,7 +36,7 @@ class HomePage extends StatelessWidget {
             _sectionTitle('Featured Movies'),
             _featuredList(context),
             _sectionTitle('All Movies'),
-            _allMoviesList(),
+            _allMoviesList(context),
           ],
         ),
       ),
@@ -79,22 +80,32 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget _allMoviesList() {
+  Widget _allMoviesList(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 16),
       child: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 10,
-          mainAxisSpacing: 10, // Added mainAxisSpacing
+          mainAxisSpacing: 10,
           childAspectRatio: 0.45,
         ),
-        itemCount: item.length, // Changed from 50 to item.length
+        itemCount: item.length,
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
-        // Removed scrollDirection: Axis.horizontal - GridView should be vertical
+
         itemBuilder: (context, index) {
-          return GridMovieItem(item: item[index]);
+          return InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => StitchDesign(item: item[index]),
+                ),
+              );
+            },
+            child: GridMovieItem(item: item[index]),
+          );
         },
       ),
     );
@@ -111,7 +122,17 @@ class HomePage extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         physics: const BouncingScrollPhysics(),
         itemBuilder: (context, index) {
-          return FeaturedItemWidget(item: featuredItem[index]);
+          return InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => StitchDesign(item: featuredItem[index]),
+                ),
+              );
+            },
+            child: FeaturedItemWidget(item: featuredItem[index]),
+          );
         },
         separatorBuilder: (context, index) => const SizedBox(width: 8),
       ),
