@@ -1,87 +1,70 @@
-# 🎬 Movie App
+# 🎬 Movie App  
 
-This repository contains a Movie App developed as a task in **DEPI**.  
-The application features two main pages:  
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)  
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)  
+![Provider](https://img.shields.io/badge/Provider-FFCA28?style=for-the-badge&logo=flutter&logoColor=black)  
 
-- **Home Page** – Displays a list of movies with details.  
-- **Watched List Page** – Allows users to track movies they’ve watched.  
+This repository contains a **Movie App** developed as a task in **DEPI (Digital Egypt Pioneers Initiative)**.  
 
-I focused on implementing **Clean Architecture principles**.  
-For state management, I applied different approaches including `setState` for simple scenarios and `Provider` for more complex handling.  
+The application has two main pages:  
 
----
+- 🏠 **Home Page** – Displays a list of movies with details.  
+- ✅ **Watched List Page** – Allows users to track movies they’ve watched.  
 
-## ✨ Features
-
-*   **Home Page:** Displays a list of movies with details.  
-*   **Watched List Page:** Allows users to track movies they’ve watched.  
-*   **Local Data Storage:** The application uses local data for movie information.  
-*   **Clean Architecture:** Implemented for a scalable and maintainable codebase.  
-*   **State Management:** Utilizes `setState` for simple scenarios and `Provider` for more complex state management.  
+The app is built with **Clean Architecture** and uses both `setState` and `Provider` for state management.  
 
 ---
 
-## 🛠️ Technologies Used
+## ✨ Features  
 
-*   **Flutter:** UI toolkit.  
-*   **Dart:** Programming language.  
-*   **Local Storage:** For data persistence.  
-*   **Provider:** For state management.  
-
----
-
-## 📸 Screenshots
-
-Below are screenshots of various pages within the application, providing a visual overview of its functionality and design.  
-
-### Application Screenshots
-
-| Screen Name | Screenshot |
-|---|---|
-| Book 1 | ![Book 1](assets/images/book.png) |
-| Book 2 | ![Book 2](assets/images/book_2.png) |
-| Book 3 | ![Book 3](assets/images/book_3.png) |
-| Book 4 | ![Book 4](assets/images/book_4.png) |
-| Book 5 | ![Book 5](assets/images/book_5.png) |
-| Book 6 | ![Book 6](assets/images/book_6.png) |
-| Book 7 | ![Book 7](assets/images/book_7.png) |
-| Book 8 | ![Book 8](assets/images/book_8.png) |
-| Book 9 | ![Book 9](assets/images/book_9.png) |
-| Book 10 | ![Book 10](assets/images/book_10.png) |
-| Book 11 | ![Book 11](assets/images/book_11.png) |
-| Book 12 | ![Book 12](assets/images/book_12.png) |
-| Book 13 | ![Book 13](assets/images/book_13.png) |
-| Book 14 | ![Book 14](assets/images/book_14.png) |
+✅ **Home Page:** Browse movies with details & search functionality.  
+✅ **Watched List Page:** Track and manage watched movies.  
+✅ **Local Data Storage:** Stores and retrieves movie info locally.  
+✅ **Clean Architecture:** Ensures scalable & maintainable code.  
+✅ **State Management:** Combination of `setState` and `Provider`.  
 
 ---
 
-## 🚀 Getting Started
+## 🛠️ Technologies Used  
 
-To get a local copy up and running, follow these simple steps.  
+- **Flutter** – UI toolkit.  
+- **Dart** – Programming language.  
+- **Local Storage** – Data persistence.  
+- **Provider** – State management.  
 
-### Prerequisites
+---
 
-Make sure you have Flutter installed on your machine.  
-If not, follow the official Flutter installation guide:  
-👉 [Install Flutter](https://flutter.dev/docs/get-started/install)  
+## 📸 Screenshots  
 
-### Installation
+| Screen Name | Screenshot | Description |
+|---|---|---|
+| 🏠 Home Page | ![Home Page](assets/images/screanshot/home_page.jpg) | Main movie catalog with featured & all movies. |
+| 🎥 Item Details | ![Item Details Page](assets/images/screanshot/item_details.jpg) | Shows detailed info about a movie with option to mark as watched. |
+| 🚀 Splash Page | ![Splash Page](assets/images/screanshot/splach_page.jpg) | Initial loading screen showing app logo. |
+| ✅ Watched List | ![Watched List Page](assets/images/screanshot/watched_page.jpg) | List of movies the user has marked as watched. |
 
-1. Clone the repository:
+---
+
+## 🚀 Getting Started  
+
+### Prerequisites  
+Make sure you have Flutter installed. 👉 [Install Flutter](https://flutter.dev/docs/get-started/install)  
+
+### Installation  
+
+1. Clone the repository:  
     ```bash
     git clone https://github.com/AhmedAbdelaal345/Movie_App.git
     ```
-2. Navigate to the project directory:
+2. Navigate to the project directory:  
     ```bash
     cd Movie_App
     ```
-3. Get the dependencies:
+3. Get the dependencies:  
     ```bash
     flutter pub get
     ```
-4. Run the app:
+4. Run the app:  
     ```bash
     flutter run
     ```
-
----
